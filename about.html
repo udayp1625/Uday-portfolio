@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="about.css">
+<header>
+    <h2>Uday</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="udaynew1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! I'm Uday Patil, I am 2nd Year Student of Diploma student in Polytechnic, specializing Computer Science and Engineering. I am passionate about <span>Frontend development </span>and have expertise in HTML,CSS and Basic Javascript and knowledge about C,C++ and SQL 
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span></li>
+                        <li><span>CSS</span></li>
+                        <li><span>Basic Javascript</span></li>
+                        <li><span>C</span></li>
+                        <li><span>C++</span></li>
+                        <li><span>SQL</span></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Diploma in Computer Science and Engineering</span></li>
+                        <li><span>Grade:B+</span></li>
+                        <li><span>10th: 88.20%</span></li>
+                        <li><span>Ms-cit:95%</span></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+var tablinks= document.getElementsByClassName("tab-links");
+var tabcontents= document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
+}
+</script>
